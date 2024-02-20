@@ -1,266 +1,283 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon"
-      href="data:image/jpeg;base64,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">
-    <title>Lịch làm việc</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-  
-      header {
-        background-color: #f58220;
-        color: #fff;
-        padding: 20px;
-      }
-  
-      header img {
-        width: 150px;
-        height: auto;
-        border-radius: 10px;
-      }
-  
-      header h1 {
-        font-size: 24px;
-        margin-top: 0;
-      }
-  
-      main {
-        display: flex;
-      }
-  
-      #content form label {
-        display: block;
-        margin-bottom: 10px;
-      }
-  
-      #content form select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-  
-      #content form button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #f58220;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-      }
-  
-      #menu {
-        width: 200px;
-        background-color: #ddd;
-        padding: 20px;
-      }
-  
-      #menu ul {
-        list-style: none;
-        padding: 0;
-      }
-  
-      #menu ul li {
-        margin-bottom: 10px;
-      }
-  
-      #menu ul li a {
-        text-decoration: none;
-        color: #333;
-      }
-  
-      #menu ul li a:hover {
-        color: #f58220;
-      }
-  
-      #content {
-        flex: 1;
-        padding: 20px;
-      }
-  
-      footer {
-        background-color: #f58220;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-      }
-  
-      .lich-lam-viec {
-        width: 100%;
-        border-collapse: collapse;
-      }
-  
-      .lich-lam-viec th,
-      .lich-lam-viec td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-      }
-  
-      .lich-lam-viec th {
-        background-color: #f58220;
-      }
-  
-      .lich-lam-viec ul {
-        list-style: none;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="../index.html">
-        <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/fb/48/ef/lotteria.jpg" alt="Logo Lotteria" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon"
+    href="data:image/jpeg;base64,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">
+  <title>Lịch làm việc</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f58220;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    main {
+      display: flex;
+    }
+
+    #content form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #content form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #content form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #f58220;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #menu {
+      width: 200px;
+      background-color: #ddd;
+      padding: 20px;
+    }
+
+    #menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #menu ul li {
+      margin-bottom: 10px;
+    }
+
+    #menu ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    #menu ul li a:hover {
+      color: #f58220;
+    }
+
+    #content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #f58220;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .lich-lam-viec {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .lich-lam-viec th,
+    .lich-lam-viec td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .lich-lam-viec th {
+      background-color: #f58220;
+    }
+
+    .lich-lam-viec ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #login img {
+      width: 50px;
+      height: auto;
+      border-radius: 50%;
+      text-align: right;
+      margin-left: 95%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="login">
+      <a href="./Feature/dang-nhap.html">
+        <img src="https://th.bing.com/th/id/OIP.-TGmlZnQ_2yV-ls-VD3nkwAAAA?w=198&h=184&c=7&r=0&o=5&pid=1.7" alt="avatar"
+          title="Đăng xuất">
       </a>
-      <h1>Quản lý nhân viên làm thêm</h1>
-    </header>
-    <main>
-      <section id="menu">
-        <ul>
-          <li><a href="../index.html">Trang chủ</a></li>
-          <li><a href="lich-lam-viec.html">Lịch làm việc</a></li>
-          <li><a href="dang-ky-ca-lam.html">Đăng ký ca làm</a></li>
-          <li><a href="quan-ly-nhan-vien.html">Quản lý nhân viên</a></li>
-          <li><a href="bao-cao-luong.html">Báo cáo lương</a></li>
-          <li><a href="cai-dat.html">Cài đặt</a></li>
-        </ul>
-      </section>
-      <section id="content">
-        <h2>Lịch làm việc</h2>
-        <form action="#">
-          <label for="thang">Tháng:</label>
-          <select id="thang" name="thang" required>
-            <option value>Chọn tháng</option>
-            <option value="1">Tháng 1</option>
-            <option value="2">Tháng 2</option>
-            <option value="3">Tháng 3</option>
-            <option value="4">Tháng 4</option>
-            <option value="5">Tháng 5</option>
-            <option value="6">Tháng 6</option>
-            <option value="7">Tháng 7</option>
-            <option value="8">Tháng 8</option>
-            <option value="9">Tháng 9</option>
-            <option value="10">Tháng 10</option>
-            <option value="11">Tháng 11</option>
-            <option value="12">Tháng 12</option>
-          </select>
-        </form>
-        <br>
-        <form action="#">
-          <label for="thang">Tuần:</label>
-          <select id="thang" name="thang" required>
-            <option value>Chọn tháng</option>
-            <option value="1">Tuần 1</option>
-            <option value="2">Tuần 2</option>
-            <option value="3">Tuần 3</option>
-            <option value="4">Tuần 4</option>
-          </select>
-          <button type="submit">Lọc</button>
-        </form>
-        <br>
-        <table class="lich-lam-viec">
-          <thead>
-            <tr>
-              <th>Thứ Hai</th>
-              <th>Thứ Ba</th>
-              <th>Thứ Tư</th>
-              <th>Thứ Năm</th>
-              <th>Thứ Sáu</th>
-              <th>Thứ Bảy</th>
-              <th>Chủ Nhật</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>Ca 1 (8-16h)</p>
-                <ul>
-                  <li>Nguyễn Văn A</li>
-                  <li>Trần Thị B</li>
-                </ul>
-                <p>Ca 2 (16-24h)</p>
-                <ul>
-                  <li>Lê Văn C</li>
-                  <li>Phạm Thị D</li>
-                </ul>
-              </td>
-              <td>
-                <p>Ca 1 (8-16h)</p>
-                <ul>
-                  <li>Nguyễn Văn A</li>
-                  <li>Trần Thị B</li>
-                </ul>
-                <p>Ca 2 (16-24h)</p>
-                <ul>
-                  <li>Lê Văn C</li>
-                  <li>Phạm Thị D</li>
-                </ul>
-              </td>
-              <td>
-                <p>Ca 1 (8-16h)</p>
-                <ul>
-                  <li>Nguyễn Văn A</li>
-                  <li>Trần Thị B</li>
-                </ul>
-                <p>Ca 2 (16-24h)</p>
-                <ul>
-                  <li>Lê Văn C</li>
-                  <li>Phạm Thị D</li>
-                </ul>
-              </td>
-              <td>
-                <p>Ca 1 (8-16h)</p>
-                <ul>
-                  <li>Nguyễn Văn A</li>
-                  <li>Trần Thị B</li>
-                </ul>
-                <p>Ca 2 (16-24h)</p>
-                <ul>
-                  <li>Lê Văn C</li>
-                  <li>Phạm Thị D</li>
-                </ul>
-              </td>
-              <td>
-                <p>Ca 1 (8-16h)</p>
-                <ul>
-                  <li>Nguyễn Văn A</li>
-                  <li>Trần Thị B</li>
-                </ul>
-                <p>Ca 2 (16-24h)</p>
-                <ul>
-                  <li>Lê Văn C</li>
-                  <li>Phạm Thị D</li>
-                </ul>
-              </td>
-              <td>
-                <p>Ca 1 (8-16h)</p>
-                <ul>
-                  <li>Nguyễn Văn A</li>
-                  <li>Trần Thị B</li>
-                </ul>
-                <p>Ca 2 (16-24h)</p>
-                <ul>
-                  <li>Lê Văn C</li>
-                </ul>
-              </td>
-              <td>
-                <p>Nghỉ</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <form>
-          <button type="submit">Xuất lịch ra exel</button>
-        </form>
-      </section>
-    </main>
-    <footer>Copyright &copy; 2024 Lotteria</footer>
-  </body>
+    </div>
+    <a href="../index.html">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/fb/48/ef/lotteria.jpg" alt="Logo Lotteria" />
+    </a>
+    <h1>Quản lý nhân viên làm thêm</h1>
+  </header>
+  <main>
+    <section id="menu">
+      <ul>
+        <li><a href="../index.html">Trang chủ</a></li>
+        <li><a href="lich-lam-viec.html">Lịch làm việc</a></li>
+        <li><a href="dang-ky-ca-lam.html">Đăng ký ca làm</a></li>
+        <li><a href="quan-ly-nhan-vien.html">Quản lý nhân viên</a></li>
+        <li><a href="bao-cao-luong.html">Báo cáo lương</a></li>
+        <li><a href="cai-dat.html">Cài đặt</a></li>
+      </ul>
+    </section>
+    <section id="content">
+      <h2>Lịch làm việc</h2>
+      <form action="#">
+        <label for="thang">Tháng:</label>
+        <select id="thang" name="thang" required>
+          <option value>Chọn tháng</option>
+          <option value="1">Tháng 1</option>
+          <option value="2">Tháng 2</option>
+          <option value="3">Tháng 3</option>
+          <option value="4">Tháng 4</option>
+          <option value="5">Tháng 5</option>
+          <option value="6">Tháng 6</option>
+          <option value="7">Tháng 7</option>
+          <option value="8">Tháng 8</option>
+          <option value="9">Tháng 9</option>
+          <option value="10">Tháng 10</option>
+          <option value="11">Tháng 11</option>
+          <option value="12">Tháng 12</option>
+        </select>
+      </form>
+      <br>
+      <form action="#">
+        <label for="thang">Tuần:</label>
+        <select id="thang" name="thang" required>
+          <option value>Chọn tháng</option>
+          <option value="1">Tuần 1</option>
+          <option value="2">Tuần 2</option>
+          <option value="3">Tuần 3</option>
+          <option value="4">Tuần 4</option>
+        </select>
+        <button type="submit">Lọc</button>
+      </form>
+      <br>
+      <table class="lich-lam-viec">
+        <thead>
+          <tr>
+            <th>Thứ Hai</th>
+            <th>Thứ Ba</th>
+            <th>Thứ Tư</th>
+            <th>Thứ Năm</th>
+            <th>Thứ Sáu</th>
+            <th>Thứ Bảy</th>
+            <th>Chủ Nhật</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Ca 1 (8-16h)</p>
+              <ul>
+                <li>Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+              </ul>
+              <p>Ca 2 (16-24h)</p>
+              <ul>
+                <li>Lê Văn C</li>
+                <li>Phạm Thị D</li>
+              </ul>
+            </td>
+            <td>
+              <p>Ca 1 (8-16h)</p>
+              <ul>
+                <li>Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+              </ul>
+              <p>Ca 2 (16-24h)</p>
+              <ul>
+                <li>Lê Văn C</li>
+                <li>Phạm Thị D</li>
+              </ul>
+            </td>
+            <td>
+              <p>Ca 1 (8-16h)</p>
+              <ul>
+                <li>Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+              </ul>
+              <p>Ca 2 (16-24h)</p>
+              <ul>
+                <li>Lê Văn C</li>
+                <li>Phạm Thị D</li>
+              </ul>
+            </td>
+            <td>
+              <p>Ca 1 (8-16h)</p>
+              <ul>
+                <li>Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+              </ul>
+              <p>Ca 2 (16-24h)</p>
+              <ul>
+                <li>Lê Văn C</li>
+                <li>Phạm Thị D</li>
+              </ul>
+            </td>
+            <td>
+              <p>Ca 1 (8-16h)</p>
+              <ul>
+                <li>Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+              </ul>
+              <p>Ca 2 (16-24h)</p>
+              <ul>
+                <li>Lê Văn C</li>
+                <li>Phạm Thị D</li>
+              </ul>
+            </td>
+            <td>
+              <p>Ca 1 (8-16h)</p>
+              <ul>
+                <li>Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+              </ul>
+              <p>Ca 2 (16-24h)</p>
+              <ul>
+                <li>Lê Văn C</li>
+              </ul>
+            </td>
+            <td>
+              <p>Nghỉ</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <form>
+        <button type="submit">Xuất lịch ra exel</button>
+      </form>
+    </section>
+  </main>
+  <footer>Copyright &copy; 2024 Lotteria</footer>
+</body>
+
 </html>
